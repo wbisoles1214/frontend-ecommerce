@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CardFeature from "./CardFeature";
 import FilterProduct from "./FilterProduct";
@@ -16,7 +16,7 @@ const AllProduct = ({ heading }) => {
   }, [productData]);
 
   const handleFilterProduct = (category) => {
-    setFilterBy(category)
+    setFilterBy(category);
     const filter = productData.filter(
       (el) => el.category.toLowerCase() === category.toLowerCase()
     );
@@ -64,9 +64,8 @@ const AllProduct = ({ heading }) => {
                 />
               );
             })
-          : 
-          loadingArrayFeature.map((el,index) => (
-              <CardFeature loading="Loading..." key={index+"allProduct"} />
+          : loadingArrayFeature.map((el, index) => (
+              <CardFeature loading="Loading..." key={index + "allProduct"} />
             ))}
       </div>
     </div>

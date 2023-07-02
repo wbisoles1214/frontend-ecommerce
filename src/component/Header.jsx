@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assest/logo.png";
+import logo from "../assets/logo7.png";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { BsCartFill } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,7 +20,7 @@ const Header = () => {
     toast("Logout successfully");
   };
 
-  const cartItemNumber = useSelector((state)=>state.product.cartItem)
+  const cartItemNumber = useSelector((state) => state.product.cartItem);
   return (
     <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50 bg-white">
       {/* desktop */}
@@ -35,7 +35,7 @@ const Header = () => {
         <div className="flex items-center gap-4 md:gap-7">
           <nav className="gap-4 md:gap-6 text-base md:text-lg hidden md:flex">
             <Link to={""}>Home</Link>
-            <Link to={"menu/63f0fdbb3bcc2f97fa53d25d"}>Menu</Link>
+            <Link to={"menu"}>Menu</Link>
             <Link to={"about"}>About</Link>
             <Link to={"contact"}>Contact</Link>
           </nav>
