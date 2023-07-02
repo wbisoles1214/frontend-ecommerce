@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CardFeature from "./CardFeature";
 import FilterProduct from "./FilterProduct";
@@ -62,14 +62,3 @@ const AllProduct = ({ heading }) => {
                   category={el.category}
                   price={el.price}
                 />
-              );
-            })
-          : loadingArrayFeature.map((el, index) => (
-              <CardFeature loading="Loading..." key={index + "allProduct"} />
-            ))}
-      </div>
-    </div>
-  );
-};
-
-export default AllProduct;

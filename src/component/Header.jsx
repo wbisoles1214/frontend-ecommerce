@@ -21,10 +21,10 @@ const Header = () => {
   };
 
   const cartItemNumber = useSelector((state) => state.product.cartItem);
+
   return (
     <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50 bg-white">
       {/* desktop */}
-
       <div className="flex items-center h-full justify-between">
         <Link to={""}>
           <div className="h-10">
@@ -85,10 +85,7 @@ const Header = () => {
                   <Link to={""} className="px-2 py-1">
                     Home
                   </Link>
-                  <Link
-                    to={"menu/63f0fdbb3bcc2f97fa53d25d"}
-                    className="px-2 py-1"
-                  >
+                  <Link to={"menu"} className="px-2 py-1">
                     Menu
                   </Link>
                   <Link to={"about"} className="px-2 py-1">
