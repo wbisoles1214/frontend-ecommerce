@@ -16,7 +16,7 @@ const AllProduct = ({ heading }) => {
   }, [productData]);
 
   const handleFilterProduct = (category) => {
-    setFilterBy(category)
+    setFilterBy(category);
     const filter = productData.filter(
       (el) => el.category.toLowerCase() === category.toLowerCase()
     );
@@ -62,15 +62,3 @@ const AllProduct = ({ heading }) => {
                   category={el.category}
                   price={el.price}
                 />
-              );
-            })
-          : 
-          loadingArrayFeature.map((el,index) => (
-              <CardFeature loading="Loading..." key={index+"allProduct"} />
-            ))}
-      </div>
-    </div>
-  );
-};
-
-export default AllProduct;
